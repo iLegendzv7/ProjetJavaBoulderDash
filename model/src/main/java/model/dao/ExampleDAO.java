@@ -42,6 +42,7 @@ public abstract class ExampleDAO extends AbstractDAO {
      */
     public static Example getExampleById(final int id) throws SQLException {
         final CallableStatement callStatement = prepareCall(sqlExampleById);
+        
         Example example = null;
         callStatement.setInt(1, id);
         if (callStatement.execute()) {
@@ -53,6 +54,7 @@ public abstract class ExampleDAO extends AbstractDAO {
         }
         return example;
     }
+
 
     /**
      * Gets the example by name.
