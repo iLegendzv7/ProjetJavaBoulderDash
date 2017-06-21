@@ -1,6 +1,6 @@
 package controller;
 
 public enum Actions {
-	UP, DOWN,RIGHT, LEFT, PUSH
+	UP, DOWN, RIGHT, LEFT, PUSH
 
 }

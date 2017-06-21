@@ -1,7 +1,15 @@
 package model;
 
-public class Diamond extends Blocks {
-	public void lootable() {
+import java.awt.Image;
 
+public class Diamond extends Blocks {
+
+	public Diamond( int y, int x) {
+		super( y, x);
+		
+	}
+
+	public void lootable() {
+		
 	}
 }
