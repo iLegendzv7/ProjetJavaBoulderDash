@@ -1,6 +1,6 @@
 package controller;
 
-public enum Actions {
+public enum UserOrder {
 	UP, DOWN, RIGHT, LEFT, PUSH
 
 }

@@ -1,0 +1,86 @@
+package model;
+
+import java.awt.Point;
+import java.io.IOException;
+
+import model.IElement;
+import view.IPawn;
+
+/**
+ * <h1>The Interface IMobile.</h1>
+ *
+ * @author Jade
+ * @version 0.1
+ * @see IPawn
+ * @see IElement
+ */
+public interface ICharacter extends IPawn, IElement {
+
+    /**
+     * Move up.
+     * @throws IOException 
+     */
+    void moveUp() ;
+
+    /**
+     * Move left.
+     * @throws IOException 
+     */
+    void moveLeft() ;
+
+    /**
+     * Move down.
+     * @throws IOException 
+     */
+    void moveDown() ;
+
+    /**
+     * Move right.
+     * @throws IOException 
+     */
+    void moveRight() ;
+
+    /**
+     * Do nothing.
+     */
+    void doNothing();
+
+    /**
+     * Gets the x.
+     *
+     * @return the x
+     */
+    @Override
+    int getX();
+
+    /**
+     * Gets the y.
+     *
+     * @return the y
+     */
+    @Override
+    int getY();
+
+    /**
+     * Checks if is alive.
+     *
+     * @return the alive
+     */
+    Boolean isAlive();
+   
+    /**
+     * Checks if the car crashed.
+     *
+     * @return the boolean
+     */
+   // Boolean isCrashed();
+
+    Boolean isWon();
+    /*
+     * (non-Javadoc)
+     * @see fr.exia.showboard.IPawn#getPosition()
+     */
+    @Override
+    Point getPosition();
+
+}
