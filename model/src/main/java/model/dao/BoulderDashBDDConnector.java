@@ -32,6 +32,7 @@ final class BoulderDashBDDConnector {
 
 	/** The statement. */
 	private Statement statement;
+	private ResultSet result;
 
 	/**
 	 * Instantiates a new boulder dash BDD connector.
@@ -72,6 +73,7 @@ final class BoulderDashBDDConnector {
 			this.connection = DriverManager.getConnection(BoulderDashBDDConnector.url, BoulderDashBDDConnector.user,
 					BoulderDashBDDConnector.password);
 			this.statement = this.connection.createStatement();
+			
 			return true;
 		} catch (final SQLException exception) {
 			exception.printStackTrace();
@@ -88,6 +90,7 @@ final class BoulderDashBDDConnector {
 	 */
 	public ResultSet executeQuery(final String query) {
 		try {
+			
 			return this.getStatement().executeQuery(query);
 		} catch (final SQLException e) {
 			e.printStackTrace();
@@ -111,10 +114,9 @@ final class BoulderDashBDDConnector {
 		return null;
 	}
 
-	public void insertMap(final String str){
-		final ResultSet resultSet=this.executeQuery(QueryMapBoulderdash.getQuerySelectMap(str));
+	public void insertMap(final String str) {
+		final ResultSet resultSet = this.executeQuery(QueryMapBoulderdash.getQuerySelectMap(str));
 		try {
-
 
 			char[][] map3 = new char[22][40];
 
@@ -131,14 +133,14 @@ final class BoulderDashBDDConnector {
 					map3[ligne][colonne] = result.getObject(2).toString().charAt(colonne);
 				}
 				ligne++;
-				
+
 			}
-			
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
+
 	/**
 	 * Execute update.
 	 *
