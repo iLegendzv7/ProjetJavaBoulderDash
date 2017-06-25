@@ -9,8 +9,6 @@ import java.awt.Image;
  * IBoard.
  * </p>
  *
- * @author Anne-Emilie DIET
- * @version 1.1
  * @see Image
  */
 public interface ISquare {

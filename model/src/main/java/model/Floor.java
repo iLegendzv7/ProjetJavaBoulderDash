@@ -4,10 +4,8 @@ import model.Permeability;
 import model.Sprite;
 
 /**
- * <h1>The Macadam Class.</h1>
+ * <h1>The Floor Class.</h1>
  *
- * @author Jade
- * @version 0.2
  */
 public class Floor extends MotionlessElement {
 
@@ -22,7 +20,7 @@ public class Floor extends MotionlessElement {
 	}
 	/**
     /**
-     * Instantiates a new macadam.
+     * Instantiates a new Floor.
      */
 	 public Floor() {
         super(SPRITE, Permeability.PENETRABLE);

@@ -11,48 +11,40 @@ import model.unbreakableWall;
 /**
  * <h1>A factory to create MotionlessElements objects.</h1>
  *
- * @author Jade
- * @version 0.3
  */
 public abstract class MotionlessElementsFactory {
 
-	/** The Constant ditchRight. */
+	/** The Constant door. */
 	private static final Door door = new Door();
 
-	/** The Constant ditchLeft. */
+	/** The Constant wall. */
 	private static final Wall wall = new Wall();
 
-	/** The Constant ditchLeftTurnLeft. */
+	/** The Constant boulder. */
 	private static final Boulder boulder = new Boulder();
 
-	/** The Constant TREE. */
+	/** The Constant DIAMOND. */
 	private static final Diamond DIAMOND = new Diamond();
+	/** The Constant MONSTER. */
+	private static final Monster MONSTER = new Monster();
 
-	
+	/** The Constant UNBREAKABLEWALL. */
+	private static final unbreakableWall UNBREAKABLEWALL = new unbreakableWall();
+
+	/** The Constant floor. */
+	private static final Floor floor = new Floor();
+
 	public static Diamond getDiamond() {
 		return DIAMOND;
 	}
 
-	/** The Constant MACADAM. */
-	private static final Floor floor = new Floor();
-
-	/** The Constant OBSTACLE. */
-	private static final unbreakableWall UNBREAKABLEWALL = new unbreakableWall();
-
 	/**
 	 * The motionless elements is an array of all possible MotionlessElement.
 	 */
-	private static MotionlessElement[] motionlessElements = { door, wall, boulder, floor, UNBREAKABLEWALL, DIAMOND };
+	private static MotionlessElement[] motionlessElements = { door, wall, boulder, floor, UNBREAKABLEWALL, DIAMOND,
+			MONSTER };
 
-	/**
-	 * Creates a new MotionlessElements object.
-	 *
-	 * @return the motionless element
-	 */
 
-	public static MotionlessElement createDoor() {
-		return door;
-	}
 
 	/**
 	 * Creates a new MotionlessElements object.
@@ -61,6 +53,23 @@ public abstract class MotionlessElementsFactory {
 	 */
 	public static MotionlessElement createWall() {
 		return wall;
+	}
+	/**
+	 * Creates a new MotionlessElements object.
+	 *
+	 * @return the motionless element
+	 */
+	public static MotionlessElement createMonster() {
+		return MONSTER;
+	}
+	/**
+	 * Creates a new MotionlessElements object.
+	 *
+	 * @return the motionless element
+	 */
+
+	public static MotionlessElement createDoor() {
+		return door;
 	}
 
 	/**
@@ -104,12 +113,12 @@ public abstract class MotionlessElementsFactory {
 	public static MotionlessElement getFromFileSymbol(final char fileSymbol) {
 		for (final MotionlessElement motionlessElement : motionlessElements) {
 			if (motionlessElement.getSprite().getConsoleImage() == fileSymbol) {
-				
+
 				return motionlessElement;
 			}
-		
+
 		}
-	
+
 		return floor;
 	}
 }

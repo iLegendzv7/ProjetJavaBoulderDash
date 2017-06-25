@@ -6,10 +6,9 @@ import model.IMap;
 import view.IBoard;
 
 /**
- * <h1>The Interface IInsaneVehiclesView.</h1>
+ * <h1>The Interface IBoulderDashView.</h1>
  *
- * @author Jade
- * @version 0.1
+
  */
 public interface IBoulderDashView {
 
@@ -22,7 +21,7 @@ public interface IBoulderDashView {
     void displayMessage(String message);
     public IBoard getBoardFrame();
     /**
-     * Follow myVehicle.
+     * Follow RockFord.
      *  
      */
     void followRockford();

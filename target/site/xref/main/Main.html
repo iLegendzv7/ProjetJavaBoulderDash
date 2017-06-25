@@ -49,46 +49,57 @@
 <a class="jxr_linenumber" name="L41" href="#L41">41</a>  <strong class="jxr_keyword">import</strong> controller.IBoulderDashController;
 <a class="jxr_linenumber" name="L42" href="#L42">42</a>  <strong class="jxr_keyword">import</strong> model.ImyCharacterModel;
 <a class="jxr_linenumber" name="L43" href="#L43">43</a>  <strong class="jxr_keyword">import</strong> model.myCharacterModel;
-<a class="jxr_linenumber" name="L44" href="#L44">44</a>  <strong class="jxr_keyword">import</strong> view.BoulderDashView;
-<a class="jxr_linenumber" name="L45" href="#L45">45</a>  
-<a class="jxr_linenumber" name="L46" href="#L46">46</a>  <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="L47" href="#L47">47</a>  <em class="jxr_javadoccomment"> * &lt;h1&gt;The InsaneVehicles Class.&lt;/h1&gt;</em>
-<a class="jxr_linenumber" name="L48" href="#L48">48</a>  <em class="jxr_javadoccomment"> *</em>
-<a class="jxr_linenumber" name="L49" href="#L49">49</a>  <em class="jxr_javadoccomment"> * @author Jade</em>
-<a class="jxr_linenumber" name="L50" href="#L50">50</a>  <em class="jxr_javadoccomment"> * @version 0.2</em>
-<a class="jxr_linenumber" name="L51" href="#L51">51</a>  <em class="jxr_javadoccomment"> */</em>
-<a class="jxr_linenumber" name="L52" href="#L52">52</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">abstract</strong> <strong class="jxr_keyword">class</strong> <a href="../main/Main.html">Main</a> {
-<a class="jxr_linenumber" name="L53" href="#L53">53</a>  
-<a class="jxr_linenumber" name="L54" href="#L54">54</a>      <em class="jxr_javadoccomment">/** The Constant startX. */</em>
-<a class="jxr_linenumber" name="L55" href="#L55">55</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> startX = 4;
-<a class="jxr_linenumber" name="L56" href="#L56">56</a>  
-<a class="jxr_linenumber" name="L57" href="#L57">57</a>      <em class="jxr_javadoccomment">/** The Constant startY. */</em>
-<a class="jxr_linenumber" name="L58" href="#L58">58</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> startY = 1;
-<a class="jxr_linenumber" name="L59" href="#L59">59</a>  
-<a class="jxr_linenumber" name="L60" href="#L60">60</a>      <em class="jxr_javadoccomment">/**</em>
-<a class="jxr_linenumber" name="L61" href="#L61">61</a>  <em class="jxr_javadoccomment">     * The main method.</em>
-<a class="jxr_linenumber" name="L62" href="#L62">62</a>  <em class="jxr_javadoccomment">     *</em>
-<a class="jxr_linenumber" name="L63" href="#L63">63</a>  <em class="jxr_javadoccomment">     * @param args</em>
-<a class="jxr_linenumber" name="L64" href="#L64">64</a>  <em class="jxr_javadoccomment">     *            the arguments</em>
-<a class="jxr_linenumber" name="L65" href="#L65">65</a>  <em class="jxr_javadoccomment">     * @throws IOException</em>
-<a class="jxr_linenumber" name="L66" href="#L66">66</a>  <em class="jxr_javadoccomment">     *             Signals that an I/O exception has occurred.</em>
-<a class="jxr_linenumber" name="L67" href="#L67">67</a>  <em class="jxr_javadoccomment">     * @throws InterruptedException</em>
-<a class="jxr_linenumber" name="L68" href="#L68">68</a>  <em class="jxr_javadoccomment">     *             the interrupted exception</em>
-<a class="jxr_linenumber" name="L69" href="#L69">69</a>  <em class="jxr_javadoccomment">     */</em>
-<a class="jxr_linenumber" name="L70" href="#L70">70</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> main(<strong class="jxr_keyword">final</strong> String[] args) <strong class="jxr_keyword">throws</strong> IOException, InterruptedException {
-<a class="jxr_linenumber" name="L71" href="#L71">71</a>   
-<a class="jxr_linenumber" name="L72" href="#L72">72</a>      	<strong class="jxr_keyword">final</strong> <a href="../model/ImyCharacterModel.html">ImyCharacterModel</a> model = <strong class="jxr_keyword">new</strong> <a href="../model/myCharacterModel.html">myCharacterModel</a>(<span class="jxr_string">"Map_Java5.txt"</span>, startX, startY);
-<a class="jxr_linenumber" name="L73" href="#L73">73</a>          
-<a class="jxr_linenumber" name="L74" href="#L74">74</a>          	<strong class="jxr_keyword">final</strong> <a href="../view/BoulderDashView.html">BoulderDashView</a> view = <strong class="jxr_keyword">new</strong> <a href="../view/BoulderDashView.html">BoulderDashView</a>(model.getMap(), model.getMyVehicle());
-<a class="jxr_linenumber" name="L75" href="#L75">75</a>          
-<a class="jxr_linenumber" name="L76" href="#L76">76</a>          <strong class="jxr_keyword">final</strong> <a href="../controller/IBoulderDashController.html">IBoulderDashController</a> controller = <strong class="jxr_keyword">new</strong> <a href="../controller/BoulderDashController.html">BoulderDashController</a>(view, model);
-<a class="jxr_linenumber" name="L77" href="#L77">77</a>          view.setOrderPerformer(controller.getOrderPeformer());
-<a class="jxr_linenumber" name="L78" href="#L78">78</a>  
-<a class="jxr_linenumber" name="L79" href="#L79">79</a>          controller.play();
-<a class="jxr_linenumber" name="L80" href="#L80">80</a>      	
-<a class="jxr_linenumber" name="L81" href="#L81">81</a>      }
-<a class="jxr_linenumber" name="L82" href="#L82">82</a>  }
-<a class="jxr_linenumber" name="L83" href="#L83">83</a>  
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>  <strong class="jxr_keyword">import</strong> model.dao.Menu;
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>  <strong class="jxr_keyword">import</strong> model.dao.Request;
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>  <strong class="jxr_keyword">import</strong> view.BoulderDashView;
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>  
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>  <em class="jxr_javadoccomment"> * &lt;h1&gt;The BoulderDash Class.&lt;/h1&gt;</em>
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>  <em class="jxr_javadoccomment"> * @author Jade</em>
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>  <em class="jxr_javadoccomment"> * @version 0.2</em>
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">abstract</strong> <strong class="jxr_keyword">class</strong> <a href="../main/Main.html">Main</a> {
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>  
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>      <em class="jxr_javadoccomment">/** The Constant startX. */</em>
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> startX = 4;
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>  
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>      <em class="jxr_javadoccomment">/** The Constant startY. */</em>
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> startY = 1;
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>  
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>  <em class="jxr_javadoccomment">     * The main method.</em>
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>  <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>  <em class="jxr_javadoccomment">     * @param args</em>
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>  <em class="jxr_javadoccomment">     *            the arguments</em>
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>  <em class="jxr_javadoccomment">     * @throws IOException</em>
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>  <em class="jxr_javadoccomment">     *             Signals that an I/O exception has occurred.</em>
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>  <em class="jxr_javadoccomment">     * @throws InterruptedException</em>
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>  <em class="jxr_javadoccomment">     *             the interrupted exception</em>
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>  <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> main(<strong class="jxr_keyword">final</strong> String[] args) <strong class="jxr_keyword">throws</strong> IOException, InterruptedException {
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>      	   Menu menu = <strong class="jxr_keyword">new</strong> Menu();
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>             <a href="../model/dao/Request.html">Request</a> requete = <strong class="jxr_keyword">new</strong> <a href="../model/dao/Request.html">Request</a>();
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>             String map;
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>  
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>             <em class="jxr_comment">// Insert the player in the DataBase</em>
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>             requete.user(menu.menuPseudo());
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>  
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>             <em class="jxr_comment">// Level choice=map</em>
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>                  map = menu.menuLevel();
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>  
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>      	<strong class="jxr_keyword">final</strong> <a href="../model/ImyCharacterModel.html">ImyCharacterModel</a> model = <strong class="jxr_keyword">new</strong> <a href="../model/myCharacterModel.html">myCharacterModel</a>(map, startX, startY);
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>          
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>          	<strong class="jxr_keyword">final</strong> <a href="../view/BoulderDashView.html">BoulderDashView</a> view = <strong class="jxr_keyword">new</strong> <a href="../view/BoulderDashView.html">BoulderDashView</a>(model.getMap(), model.getMyCharacter());
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>          
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>          <strong class="jxr_keyword">final</strong> <a href="../controller/IBoulderDashController.html">IBoulderDashController</a> controller = <strong class="jxr_keyword">new</strong> <a href="../controller/BoulderDashController.html">BoulderDashController</a>(view, model);
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>          view.setOrderPerformer(controller.getOrderPeformer());
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>  
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>          controller.play();
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>      	
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>      }
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>  }
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>  
 </pre>
 <hr/>
 <div id="footer">Copyright &#169; 2017. All rights reserved.</div>

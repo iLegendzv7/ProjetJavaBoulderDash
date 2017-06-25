@@ -3,8 +3,6 @@ package controller;
 /**
  * <h1>The Enum UserOrder.</h1>
  *
- * @author Jade
- * @version 0.1
  */
 public enum UserOrder {
 
@@ -12,10 +10,10 @@ public enum UserOrder {
 	RIGHT,
 
 	/** The left. */
-	LEFT, 
-	
+	LEFT,
+	/** The up. */
 	UP,
-
+	/** The down. */
 	DOWN,
 
 	/** The nop. */

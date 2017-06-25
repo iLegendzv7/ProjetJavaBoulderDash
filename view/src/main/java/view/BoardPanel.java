@@ -40,8 +40,6 @@ import javax.swing.JPanel;
  * dimension, the noImage is also used.
  * </p>
  *
- * @author Anne-Emilie DIET
- * @version 3.0
  * @see JPanel
  * @see Dimension
  * @see Rectangle

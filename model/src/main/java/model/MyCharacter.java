@@ -7,10 +7,8 @@ import model.Permeability;
 import model.Sprite;
 
 /**
- * <h1>The MyVehicle Class.</h1>
+ * <h1>The MyCharacter Class.</h1>
  *
- * @author Jade
- * @version 0.2
  */
 public class MyCharacter extends CharacterActions {
 
@@ -24,20 +22,20 @@ public class MyCharacter extends CharacterActions {
 	private static final Sprite spriteTurnRight = new Sprite('j', "droite.png");
 
 	private static final Sprite spriteGoUp = new Sprite('j',"Up.png");
-	/** The Constant spriteExplode. */
-	private static final Sprite spriteExplode = new Sprite('j', "mouru.png");
-	
+	/** The Constant spriteDead. */
+	private static final Sprite spriteDead = new Sprite('j', "mouru.png");
+	/** The Constant spriteGoDown. */
 	private static final Sprite spriteGoDown = new Sprite('j', "Down.png");
 
 	/**
-	 * Instantiates a new my vehicle.
+	 * Instantiates a new my character.
 	 *
 	 * @param x
 	 *            the x
 	 * @param y
 	 *            the y
 	 * @param map
-	 *            the road
+	 *            the map
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
@@ -46,14 +44,14 @@ public class MyCharacter extends CharacterActions {
 		spriteTurnLeft.loadImage();
 		spriteTurnRight.loadImage();
 		spriteGoUp.loadImage();
-		spriteExplode.loadImage();
+		spriteDead.loadImage();
 		spriteGoDown.loadImage();
 	}
 
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see fr.exia.insanevehicles.model.element.mobile.Mobile#moveLeft()
+	 * @see model.Mobile#moveLeft()
 	 */
 	@Override
 	public final void moveLeft() {
@@ -68,7 +66,7 @@ public class MyCharacter extends CharacterActions {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see fr.exia.insanevehicles.model.element.mobile.Mobile#moveRight()
+	 * @see model.Mobile#moveRight()
 	 */
 	@Override
 	public final void moveRight() {
@@ -84,18 +82,18 @@ public class MyCharacter extends CharacterActions {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see fr.exia.insanevehicles.model.element.mobile.Mobile#die()
+	 * @see model.Mobile#die()
 	 */
 	@Override
 	protected final void die() {
 		super.die();
-		this.setSprite(spriteExplode);
+		this.setSprite(spriteDead);
 	}
 
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see fr.exia.insanevehicles.model.element.mobile.Mobile#doNothing()
+	 * @see model.Mobile#doNothing()
 	 */
 	@Override
 	public final void doNothing() {

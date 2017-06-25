@@ -10,10 +10,9 @@ import model.*;
 import view.IBoard;
 
 /**
- * <h1>The Mobile Class.</h1>
+ * <h1>The CharacterActions Class.</h1>
  *
- * @author Jade
- * @version 0.3
+
  */
 abstract class CharacterActions extends Element implements ICharacter {
 
@@ -26,8 +25,9 @@ abstract class CharacterActions extends Element implements ICharacter {
 	private Boolean alive = true;
 
 	private Boolean win = false;
-	/** The road. */
+	/** The map. */
 	private IMap map;
+	/** The Score */
 	private int score;
 	/** The board. */
 	private IBoard board;
@@ -37,8 +37,8 @@ abstract class CharacterActions extends Element implements ICharacter {
 	 *
 	 * @param sprite
 	 *            the sprite
-	 * @param road
-	 *            the road
+	 * @param map
+	 *            the map
 	 * @param permeability
 	 *            the permeability
 	 */
@@ -57,7 +57,7 @@ abstract class CharacterActions extends Element implements ICharacter {
 	 *            the y
 	 * @param sprite
 	 *            the sprite
-	 * @param road
+	 * @param map
 	 *            the road
 	 * @param permeability
 	 *            the permeability
@@ -90,14 +90,21 @@ abstract class CharacterActions extends Element implements ICharacter {
 		} else if (this.getMap().getOnTheMapXY(this.getX(), this.getY() - 1)
 				.getPermeability() == Permeability.BREAKABLE) {
 			this.getMap().getOnTheMap()[this.getX()][this.getY()] = new Floor();
+			this.setY(this.getY() - 1);
 			this.getMap().updateElement();
 
-		}
+		}   if (this.getMap().getOnTheMapXY(this.getX(), this.getY()-1).getPermeability() == Permeability.DEAD) {
+            this.setY(this.getY() - 1);
+            this.die();
 
-		else {
-			this.setY(this.getY() - 1);
+        } if (this.getMap().getOnTheMapXY(this.getX(), this.getY()-1).getPermeability() == Permeability.PENETRABLE) {
+            this.setY(this.getY() - 1);
+            ;
 
-		}
+        }
+
+
+		
 		this.setHasMoved();
 		// System.out.println(this.getRoad().getOnTheRoad()[this.getX()][this.getY()]);
 	}
@@ -113,17 +120,9 @@ abstract class CharacterActions extends Element implements ICharacter {
 			this.setX(this.getX());
 		} else if (this.getMap().getOnTheMapXY(this.getX() - 1, this.getY())
 				.getPermeability() == Permeability.BREAKABLE) {
-			//
+			
 
-			// IElement audessus = new
-			// Element(MotionlessElementsFactory.createMacadam().getSprite(),
-			// Permeability.TEST);
-			// this.getMap().setOnTheMapXY(audessus, this.getX() - 1,
-			// this.getY());
-			//
-			// this.getMap().getOnTheMap()[this.getX() -
-			// 1][this.getY()].setSprite(audessus.getSprite());
-			// this.getMap().getOnTheMap()[this.getX()-1][this.getY()].setSprite(MotionlessElementsFactory.createMacadam().getSprite());
+
 			this.getMap().setOnTheMapXY(new Floor(), this.getX(), this.getY());
 			this.getMap().updateElement();
 			this.setX(this.getX() - 1);
@@ -175,7 +174,11 @@ abstract class CharacterActions extends Element implements ICharacter {
 			this.won();
 
 			this.setY(this.getY() + 1);
-		}
+		}  else if (this.getMap().getOnTheMapXY(this.getX() , this.getY()+1).getPermeability() == Permeability.DEAD) {
+            this.setY(this.getY() +1);
+            this.die();
+
+        }
 
 		else {
 			this.setY(this.getY() + 1);
@@ -206,7 +209,12 @@ abstract class CharacterActions extends Element implements ICharacter {
 		} else if (this.getMap().getOnTheMapXY(this.getX() + 1, this.getY()).getPermeability() == Permeability.ESCAPE) {
 			this.won();
 			this.setX(this.getX() + 1);
-		} else {
+		}
+		else if (this.getMap().getOnTheMapXY(this.getX() +1, this.getY()).getPermeability() == Permeability.DEAD) {
+	            this.setX(this.getX() +1);
+	            this.die();
+
+	        }else {
 			this.setX(this.getX() + 1);
 		}
 		this.setHasMoved();
@@ -294,20 +302,16 @@ abstract class CharacterActions extends Element implements ICharacter {
 	}
 
 	/**
-	 * Sets the road.
+	 * Sets the map.
 	 *
-	 * @param road
-	 *            the new road
+	 * @param map
+	 *            the new map
 	 */
 	private void setMap(final IMap map) {
 		this.map = map;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fr.exia.insanevehicles.model.element.mobile.IMobile#isAlive()
-	 */
+
 	@Override
 	public Boolean isAlive() {
 		return this.alive;

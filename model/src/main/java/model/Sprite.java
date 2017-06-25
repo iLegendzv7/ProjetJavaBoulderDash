@@ -9,8 +9,6 @@ import javax.imageio.ImageIO;
 /**
  * <h1>The Sprite Class.</h1>
  *
- * @author Jade
- * @version 0.1
  */
 public class Sprite implements ISprite{
 

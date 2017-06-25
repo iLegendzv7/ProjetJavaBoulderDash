@@ -4,10 +4,9 @@ import model.Permeability;
 import model.Sprite;
 
 /**
- * <h1>The Ditch Class.</h1>
- *
- * @author Jade
- * @version 0.2
+ * <h1>The Boulder Class.</h1>
+*
+*
  */
 public class Boulder extends MotionlessElement {
 
@@ -22,7 +21,7 @@ public class Boulder extends MotionlessElement {
 	}
 	/**
     /**
-     * Instantiates a new ditch.
+     * Instantiates a new boulder.
      */
 	 public Boulder() {
         super(SPRITE, Permeability.BLOCKING);

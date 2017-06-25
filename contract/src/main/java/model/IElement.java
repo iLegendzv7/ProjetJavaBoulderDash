@@ -7,8 +7,6 @@ import view.ISquare;
 /**
  * <h1>The Interface IElement.</h1>
  *
- * @author Jade
- * @version 0.1
  * @see ISquare
  */
 public interface IElement extends ISquare {
@@ -18,8 +16,9 @@ public interface IElement extends ISquare {
      *
      * @return the sprite
      */
-//   public Sprite getSprite();
-//   public void setSprite(Sprite mdr);
+    public  ISprite getSprite();
+	public void setSprite(ISprite sprite);
+
     
     /**
      * Gets the permeability.
@@ -40,13 +39,12 @@ public interface IElement extends ISquare {
 
     /*;
      * (non-Javadoc)
-     * @see fr.exia.showboard.ISquare#getImage()
+     * @see view.ISquare#getImage()
      */
     @Override
     public Image getImage();
 
-    public  ISprite getSprite();
-	public void setSprite(ISprite sprite);
+
   
 
 }

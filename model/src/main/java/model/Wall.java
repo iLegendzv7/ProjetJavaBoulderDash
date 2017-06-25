@@ -22,7 +22,7 @@ public class Wall extends MotionlessElement {
 	}
 	/**
     /**
-     * Instantiates a new ditchLeft.
+     * Instantiates a new Wall.
      */
 	 public   Wall() {
         super(SPRITE, Permeability.BREAKABLE);

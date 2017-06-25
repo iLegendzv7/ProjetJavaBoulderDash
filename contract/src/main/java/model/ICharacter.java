@@ -9,8 +9,6 @@ import view.IPawn;
 /**
  * <h1>The Interface IMobile.</h1>
  *
- * @author Jade
- * @version 0.1
  * @see IPawn
  * @see IElement
  */
@@ -78,7 +76,7 @@ public interface ICharacter extends IPawn, IElement {
     Boolean isWon();
     /*
      * (non-Javadoc)
-     * @see fr.exia.showboard.IPawn#getPosition()
+     * @see view.IPawn#getPosition()
      */
     @Override
     Point getPosition();

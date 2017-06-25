@@ -3,10 +3,8 @@ package controller;
 import java.io.IOException;
 
 /**
- * <h1>The Interface IOrderPerformed.</h1>
+ * <h1>The Interface IOrderPerformer.</h1>
  * 
- * @author Jade
- * @version 0.1
  */
 public interface IOrderPerformer {
 

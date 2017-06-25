@@ -6,10 +6,8 @@ import model.ImyCharacterModel;
 import view.IBoulderDashView;
 
 /**
- * <h1>The Class InsaneVehiclesController.</h1>
+ * <h1>The Class BoulderDashController.</h1>
  *
- * @author Jade
- * @version 0.1
  * @see IOrderPerformer
  */
 public class BoulderDashController implements IBoulderDashController, IOrderPerformer {
@@ -27,7 +25,7 @@ public class BoulderDashController implements IBoulderDashController, IOrderPerf
 	private UserOrder stackOrder;
 
 	/**
-	 * Instantiates a new insane vehicles controller.
+	 * Instantiates a new BoulderDash controller.
 	 *
 	 * @param view
 	 *            the view
@@ -43,38 +41,32 @@ public class BoulderDashController implements IBoulderDashController, IOrderPerf
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see fr.exia.insanevehicles.controller.IIinsaneVehiclesController#play()
+	 * @see controller.IBoulderDashController#play()
 	 */
 	@Override
 	public final void play() throws InterruptedException {
-		// this.getModel().getRoad()
-		while (!this.getModel().getMyVehicle().isWon()) {
+		
+		while (!this.getModel().getMyCharacter().isWon()) {
 			Thread.sleep(speed);
 			switch (this.getStackOrder()) {
 			case RIGHT:
-				this.getModel().getMyVehicle().moveRight();
+				this.getModel().getMyCharacter().moveRight();
 				break;
 			case LEFT:
-				this.getModel().getMyVehicle().moveLeft();
+				this.getModel().getMyCharacter().moveLeft();
 				break;
 			case UP:
-				this.getModel().getMyVehicle().moveUp();
+				this.getModel().getMyCharacter().moveUp();
 				break;
 			case DOWN:
-				this.getModel().getMyVehicle().moveDown();
+				this.getModel().getMyCharacter().moveDown();
 				break;
 			case NOP:
 			default:
-				this.getModel().getMyVehicle().doNothing();
+				this.getModel().getMyCharacter().doNothing();
 				break;
 			}
-			// this.clearStackOrder();
-			// if (this.getModel().getMyVehicle().isAlive()) {
-			// this.getModel().getMyVehicle().moveDown();
-			// }
-			//this.getView().followMyVehicle();
-			//this.getView().getBoardFrame().update();
-		//	this.view.show(2);
+
 		}
 		this.getView().displayMessage("YOU WON !!!!!!!!!.");
 	}
@@ -83,15 +75,14 @@ public class BoulderDashController implements IBoulderDashController, IOrderPerf
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * fr.exia.insanevehicles.controller.IOrderPerformed#orderPerform(fr.exia.
-	 * insanevehicles. controller.UserOrder)
+	 * controller.IOrderPerformer#orderPerform( controller.UserOrder)
 	 */
 	/*
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * fr.exia.insanevehicles.controller.IIinsaneVehiclesController#orderPerform
-	 * (fr.exia. insanevehicles.controller.UserOrder)
+	 * controller.IBoulderDashController#orderPerform
+	 * (controller.UserOrder)
 	 */
 	@Override
 	public final void orderPerform(final UserOrder userOrder) throws IOException {
@@ -165,7 +156,7 @@ public class BoulderDashController implements IBoulderDashController, IOrderPerf
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see fr.exia.insanevehicles.controller.IIinsaneVehiclesController#
+	 * @see controller.IBoulderDashController#
 	 * getOrderPeformer()
 	 */
 	@Override

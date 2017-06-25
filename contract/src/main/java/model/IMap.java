@@ -7,8 +7,6 @@ import model.IElement;
 /**
  * <h1>The Interface IMap.</h1>
  *
- * @author Jade
- * @version 0.1
  */
 public interface IMap {
 
@@ -27,13 +25,13 @@ public interface IMap {
     int getHeight();
 
     /**
-     * Gets the on the road XY.
+     * Gets the on the map XY.
      *
      * @param x
      *            the x
      * @param y
      *            the y
-     * @return the on the road XY
+     * @return the on the map XY
      */
     public IElement getOnTheMapXY(int x, int y);
     public void setOnTheMap(IElement[][] onTheRoad);

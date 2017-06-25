@@ -4,10 +4,9 @@ import model.Permeability;
 import model.Sprite;
 
 /**
- * <h1>The DitchRight Class.</h1>
+ * <h1>The Door Class.</h1>
  *
- * @author Jade
- * @version 0.2
+
  */
 public class Door extends MotionlessElement {
 
@@ -22,7 +21,7 @@ public class Door extends MotionlessElement {
 		Type = type;
 	}
 	/**
-     * Instantiates a new ditchRight.
+     * Instantiates a new Door.
      */
     public Door() {
         super(SPRITE, Permeability.ESCAPE);

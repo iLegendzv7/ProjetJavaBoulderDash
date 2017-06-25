@@ -7,8 +7,6 @@ import model.Sprite;
 /**
  * <h1>The MotionlessElement Class.</h1>
  *
- * @author Jade
- * @version 0.2
  */
 public abstract class MotionlessElement extends Element {
 

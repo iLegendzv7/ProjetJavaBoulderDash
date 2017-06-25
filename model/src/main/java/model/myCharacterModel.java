@@ -19,8 +19,8 @@ public class myCharacterModel implements ImyCharacterModel {
     /**
      * Instantiates a new insane vehicles model.
      *
-     * @param fileName
-     *            the file name
+     * @param levelName
+     *            the level name
      * @param myCharacterStartX
      *             my Character start X
      * @param myCharacterStartY
@@ -28,15 +28,15 @@ public class myCharacterModel implements ImyCharacterModel {
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
-    public myCharacterModel(final String fileName, final int myCharacterStartX, final int myCharacterStartY)
+    public myCharacterModel(final String levelName, final int myCharacterStartX, final int myCharacterStartY)
             throws IOException {
-        this.setMap(new Map(fileName));
+        this.setMap(new Map(levelName));
         
         this.setMyCharacter(new MyCharacter(myCharacterStartX, myCharacterStartY, this.getMap()));
     }
 
     /* (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.IInsaneVehiclesModel#getRoad()
+     * @see model.ImyCharacterModel#getRoad()
      */
     @Override
     public final IMap getMap() {
@@ -44,28 +44,28 @@ public class myCharacterModel implements ImyCharacterModel {
     }
 
     /**
-     * Sets the road.
+     * Sets the map.
      *
-     * @param road
-     *            the road to set
+     * @param map
+     *            the map to set
      */
     private void setMap(final IMap map) {
         this.map = map;
     }
 
     /* (non-Javadoc)
-     * @see fr.exia.insanevehicles.model.IInsaneVehiclesModel#getMyVehicle()
+     * @see model.IBoulderDashModel#getMyVehicle()
      */
     @Override
-    public final ICharacter getMyVehicle() {
+    public final ICharacter getMyCharacter() {
         return this.myCharacter;
     }
 
     /**
-     * Sets the my vehicle.
+     * Sets the my character.
      *
-     * @param myVehicle
-     *            the myVehicle to set
+     * @param myCharacter
+     *            the myCharacter to set
      */
     private void setMyCharacter (final ICharacter myCharacter) {
         this.myCharacter = myCharacter;

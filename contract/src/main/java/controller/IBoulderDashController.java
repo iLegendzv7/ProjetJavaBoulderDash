@@ -3,16 +3,14 @@ package controller;
 import controller.IOrderPerformer;
 
 /**
- * <h1>The Interface IIinsaneVehiclesController.</h1>
+ * <h1>The Interface IBoulderDashController.</h1>
  *
- * @author Jade
- * @version 0.1
  * @see IOrderPerformer
  */
 public interface IBoulderDashController {
 
     /**
-     * Play.
+     * Start the game
      *
      * @throws InterruptedException
      *             the interrupted exception

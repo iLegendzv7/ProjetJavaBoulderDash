@@ -4,10 +4,8 @@ import model.Permeability;
 import model.Sprite;
 
 /**
- * <h1>The Tree Class.</h1>
+ * <h1>The Diamond Class.</h1>
  *
- * @author Jade
- * @version 0.2
  */
  public class Diamond extends MotionlessElement {
 
@@ -22,7 +20,7 @@ import model.Sprite;
 	}
 	/**
     /**
-     * Instantiates a new tree.
+     * Instantiates a new Diamond.
      */
     public Diamond() {
     	

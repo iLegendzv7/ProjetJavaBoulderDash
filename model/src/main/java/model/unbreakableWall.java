@@ -6,8 +6,6 @@ import model.Sprite;
 /**
  * <h1>The Obstacle Class.</h1>
  *
- * @author Jade
- * @version 0.2
  */
 public class unbreakableWall extends MotionlessElement {
 
@@ -22,7 +20,7 @@ public class unbreakableWall extends MotionlessElement {
 	}
 	/**
     /**
-     * Instantiates a new obstacle.
+     * Instantiates a new unbreakableWall.
      */
 	 public unbreakableWall() {
         super(SPRITE, Permeability.BLOCKING);

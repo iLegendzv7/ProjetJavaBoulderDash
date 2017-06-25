@@ -7,8 +7,6 @@ import view.ISquare;
 /**
  * <h1>The Element Class.</h1>
  *
- * @author Jade
- * @version 0.4
  * @see ISquare
  */
 public class Element implements IElement {
@@ -55,7 +53,7 @@ public class Element implements IElement {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see fr.exia.insanevehicles.model.element.IElement#getSprite()
+	 * @see model.IElement#getSprite()
 	 */
 	@Override
 	public final ISprite getSprite() {
@@ -77,7 +75,7 @@ public class Element implements IElement {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see fr.exia.insanevehicles.model.element.IElement#getPermeability()
+	 * @see model.IElement#getPermeability()
 	 */
 	@Override
 	public final Permeability getPermeability() {
@@ -97,12 +95,12 @@ public class Element implements IElement {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see fr.exia.showboard.ISquare#getImage()
+	 * @see view.ISquare#getImage()
 	 */
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see fr.exia.insanevehicles.model.element.IElement#getImage()
+	 * @see model.IElement#getImage()
 	 */
 	@Override
 	public final Image getImage() {

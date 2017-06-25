@@ -7,8 +7,6 @@ import java.util.Observer;
 /**
  * <h1>The Interface IBoard.</h1>
  *
- * @author Anne-Emilie DIET
- * @version 1.0
  * @see Dimension
  * @see Rectangle
  * @see ISquare

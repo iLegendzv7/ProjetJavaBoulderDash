@@ -16,25 +16,23 @@ import model.IMap;
 import view.BoardFrame;
 
 /**
- * <h1>The InsaneVehiclesView Class.</h1>
+ * <h1>The BoulderDashView Class.</h1>
  *
- * @author Jade
- * @version 0.4
  */
 public class BoulderDashView implements Runnable, KeyListener, IBoulderDashView {
 
 	/** The Constant mapView. */
 	private static final int mapView = 22;
 
-	/** The Constant squareSize. */
+	
 
 	/** The Constant closeView. */
 	private Rectangle closeView;
 
-	/** The road. */
+	/** The map. */
 	private IMap map;
 
-	/** My vehicle. */
+	/** My character. */
 	private ICharacter myCharacter;
 
 	/** The view. */
@@ -76,7 +74,7 @@ public class BoulderDashView implements Runnable, KeyListener, IBoulderDashView 
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * fr.exia.insanevehicles.view.IInsaneVehiclesView#displayMessage(java.lang.
+	 * view.IBoulderDashView#displayMessage(java.lang.
 	 * String)
 	 */
 	@Override
@@ -103,15 +101,7 @@ public class BoulderDashView implements Runnable, KeyListener, IBoulderDashView 
 		boardFrame.setFocusable(true);
 		boardFrame.setFocusTraversalKeysEnabled(false);
 
-		// int i=0;
-		// while( i==0){
-		// for (int x = 0; x < this.getMap().getWidth(); x++) {
-		// for (int y = 0; y < this.getMap().getHeight(); y++) {
-		// boardFrame.addSquare(this.map.getOnTheMapXY(x, y), x, y);
-		// }
-		// }
-		// i++;
-		// }
+
 		for (int x = 0; x < this.getMap().getWidth(); x++) {
 			for (int y = 0; y < this.getMap().getHeight(); y++) {
 				boardFrame.addSquare(this.map.getOnTheNewTabXY(x, y), x, y);
@@ -207,19 +197,19 @@ public class BoulderDashView implements Runnable, KeyListener, IBoulderDashView 
 	}
 
 	/**
-	 * Gets the road.
+	 * Gets the map.
 	 *
-	 * @return the road
+	 * @return the map
 	 */
 	private IMap getMap() {
 		return this.map;
 	}
 
 	/**
-	 * Sets the road.
+	 * Sets the map.
 	 *
 	 * @param map
-	 *            the new road
+	 *            the new map
 	 * @throws IOException
 	 *             Signals that an I/O exception has occurred.
 	 */
@@ -234,19 +224,19 @@ public class BoulderDashView implements Runnable, KeyListener, IBoulderDashView 
 	}
 
 	/**
-	 * Gets my vehicle.
+	 * Gets my character.
 	 *
-	 * @return my vehicle
+	 * @return my character
 	 */
 	private ICharacter getMyCharacter() {
 		return this.myCharacter;
 	}
 
 	/**
-	 * Sets my vehicle.
+	 * Sets my character.
 	 *
-	 * @param myVehicle
-	 *            my new vehicle
+	 * @param myCharacter
+	 *            my new character
 	 */
 	private void setMyCharacter(final ICharacter myCharacter) {
 		this.myCharacter = myCharacter;

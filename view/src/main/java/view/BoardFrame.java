@@ -16,8 +16,6 @@ import javax.swing.JFrame;
  * As the BoardPanel is a private class, BoardPanel is a Facade.
  * </p>
  *
- * @author Anne-Emilie DIET
- * @version 3.0
  * @see JFrame
  * @see BoardPanel
  * @see Dimension
@@ -85,52 +83,30 @@ public class BoardFrame extends JFrame implements IBoard {
 		this("", decorated);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fr.exia.showboard.IBoard#addSquare(fr.exia.showboard.ISquare, int,
-	 * int)
-	 */
+
 	@Override
 	public final void addSquare(final ISquare square, final int x, final int y) {
 		this.getBoardPanel().addSquare(square, x, y);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fr.exia.showboard.IBoard#addPawn(fr.exia.showboard.IPawn)
-	 */
+
 	@Override
 	public final void addPawn(final IPawn pawn) {
 		this.getBoardPanel().addPawn(pawn);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fr.exia.showboard.IBoard#getObserver()
-	 */
+
 	@Override
 	public final Observer getObserver() {
 		return this.getBoardPanel();
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fr.exia.showboard.IBoard#setDimension(java.awt.Dimension)
-	 */
+
 	@Override
 	public final void setDimension(final Dimension dimension) {
 		this.getBoardPanel().setDimension(dimension);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fr.exia.showboard.IBoard#getDimension()
-	 */
 	@Override
 	public final Dimension getDimension() {
 		return this.getBoardPanel().getDimension();
@@ -145,11 +121,7 @@ public class BoardFrame extends JFrame implements IBoard {
 		return this.getBoardPanel().getDisplayFrame();
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see fr.exia.showboard.IBoard#setDisplayFrame(java.awt.Rectangle)
-	 */
+
 	@Override
 	public final void setDisplayFrame(final Rectangle displayFrame) {
 		this.getBoardPanel().setDisplayFrame(displayFrame);

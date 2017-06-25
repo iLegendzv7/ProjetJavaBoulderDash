@@ -3,8 +3,6 @@ package model;
 /**
  * <h1>The Permeability Enum.</h1>
  *
- * @author Jade
- * @version 0.1
  */
 public enum Permeability {
 
@@ -12,8 +10,14 @@ public enum Permeability {
     BLOCKING,
     /** The penetrable. */
     PENETRABLE,
+    /** The breakable. */
 	BREAKABLE, 
+	 /** The lootable. */
 	LOOTABLE, 
+	 /** The escape. */
 	ESCAPE,
-	TEST
+	 /** The test. */
+	TEST,
+	 /** The Dead. */
+	DEAD
 }

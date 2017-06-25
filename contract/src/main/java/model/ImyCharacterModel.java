@@ -3,17 +3,15 @@ package model;
 import model.ICharacter;
 
 /**
- * <h1>The Interface IInsaneVehiclesModel.</h1>
+ * <h1>The Interface ImyCharacterModel.</h1>
  *
- * @author Jade
- * @version 0.1
  */
 public interface ImyCharacterModel {
 
     /**
-     * Gets the road.
+     * Gets the map.
      *
-     * @return the road
+     * @return the map
      */
     IMap getMap();
 
@@ -22,6 +20,6 @@ public interface ImyCharacterModel {
      *
      * @return the myVehicle
      */
-    ICharacter getMyVehicle();
+    ICharacter getMyCharacter();
 
 }
