@@ -3,7 +3,7 @@ package view;
 import java.io.IOException;
 
 import model.IMap;
-import BoardFrame;
+import view.IBoard;
 
 /**
  * <h1>The Interface IInsaneVehiclesView.</h1>
@@ -15,18 +15,26 @@ public interface IBoulderDashView {
 
     /**
      * Display message.
-     *
-     * @param message
+     *;
+     * @param message;
      *            the message
      */
     void displayMessage(String message);
-    public BoardFrame getBoardFrame();
+    public IBoard getBoardFrame();
     /**
      * Follow myVehicle.
-     * @throws IOException 
+     *  
+     */
+    void followRockford();
+    /**
+     * set the map
+     * @param map;
+     * 			the map
+     * @throws IOException
+     *  Signals that an I/O exception has occurred.
      */
     void setMap(IMap map) throws IOException;
-    void followRockford();
-   // public void show(int i);
+    
+  
 
 }

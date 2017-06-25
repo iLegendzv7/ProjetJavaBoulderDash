@@ -1,16 +1,33 @@
 package model;
 
-import java.awt.Image;
+import model.Permeability;
+import model.Sprite;
 
-public class Door extends Blocks {
+/**
+ * <h1>The DitchRight Class.</h1>
+ *
+ * @author Jade
+ * @version 0.2
+ */
+public class Door extends MotionlessElement {
 
-	public Door( int y, int x) {
-		super( y, x);
-		
+    /** The Constant SPRITE. */
+    private static final Sprite SPRITE = new Sprite('a', "Door.png");
+    
+    private String Type="Door";
+    public String getType() {
+		return Type;
 	}
-
-	public void endLevel() {
-
+	public void setType(String type) {
+		Type = type;
 	}
+	/**
+     * Instantiates a new ditchRight.
+     */
+    public Door() {
+        super(SPRITE, Permeability.ESCAPE);
+        this.setSprite(SPRITE);
+    }
+	
 
 }

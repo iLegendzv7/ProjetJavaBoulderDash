@@ -41,6 +41,7 @@ public interface IMap {
     public void setOnTheMapXY(final IElement element, final int x, final int y);
     /**
      * Sets the mobile has changed.
+     * @return tableauTransfert
      */
     public IElement[][] updateElement();
     void setMobileHasChanged();

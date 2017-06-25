@@ -18,25 +18,25 @@ public interface ICharacter extends IPawn, IElement {
 
     /**
      * Move up.
-     * @throws IOException 
+     * 
      */
-    void moveUp() ;
+    void moveUp()  ;
 
     /**
      * Move left.
-     * @throws IOException 
+     * 
      */
     void moveLeft() ;
 
     /**
      * Move down.
-     * @throws IOException 
+     * 
      */
     void moveDown() ;
 
     /**
      * Move right.
-     * @throws IOException 
+     * 
      */
     void moveRight() ;
 

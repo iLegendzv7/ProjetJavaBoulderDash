@@ -1,16 +1,33 @@
-package model;
+ package model;
 
-import java.awt.Image;
+import model.Permeability;
+import model.Sprite;
 
-public class Diamond extends Blocks {
+/**
+ * <h1>The Tree Class.</h1>
+ *
+ * @author Jade
+ * @version 0.2
+ */
+ public class Diamond extends MotionlessElement {
 
-	public Diamond( int y, int x) {
-		super( y, x);
-		
-		
+    /** The Constant SPRITE. */
+    private static final Sprite SPRITE = new Sprite('d', "Diamond.png");
+    private String Type="Diamond";
+    public String getType() {
+		return Type;
 	}
-
-	public void lootable() {
-		
+	public void setType(String type) {
+		Type = type;
 	}
+	/**
+    /**
+     * Instantiates a new tree.
+     */
+    public Diamond() {
+    	
+        super(SPRITE, Permeability.LOOTABLE);
+        this.setSprite(SPRITE);
+    }
+
 }

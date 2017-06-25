@@ -18,8 +18,8 @@ public interface IElement extends ISquare {
      *
      * @return the sprite
      */
-    Sprite getSprite();
-    void setSprite(Sprite mdr);
+//   public Sprite getSprite();
+//   public void setSprite(Sprite mdr);
     
     /**
      * Gets the permeability.
@@ -34,7 +34,7 @@ public interface IElement extends ISquare {
 	public int getElementY() ;
 
 	public void setElementY(int elementY) ;
-    Permeability getPermeability();
+    public Permeability getPermeability();
     public String getType();
     public void setType(String type);
 
@@ -43,7 +43,10 @@ public interface IElement extends ISquare {
      * @see fr.exia.showboard.ISquare#getImage()
      */
     @Override
-    Image getImage();
+    public Image getImage();
+
+    public  ISprite getSprite();
+	public void setSprite(ISprite sprite);
   
 
 }

@@ -23,5 +23,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="D:/Users/Utilisateur/Documents/Ecole/Prosit/Java/Prosit 47/mysql-connector-java-5.1.42/mysql-connector-java-5.1.42-bin.jar"/>
+	<classpathentry kind="src" path="/contract"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
