@@ -50,7 +50,7 @@ public abstract class MotionlessElementsFactory {
 	 * @return the motionless element
 	 */
 
-	public static MotionlessElement createDitchRight() {
+	public static MotionlessElement createDoor() {
 		return door;
 	}
 
@@ -59,7 +59,7 @@ public abstract class MotionlessElementsFactory {
 	 *
 	 * @return the motionless element
 	 */
-	public static MotionlessElement createDitchLeft() {
+	public static MotionlessElement createWall() {
 		return wall;
 	}
 
@@ -68,11 +68,11 @@ public abstract class MotionlessElementsFactory {
 	 *
 	 * @return the motionless element
 	 */
-	public static MotionlessElement createDitchLeftTurnLeft() {
+	public static MotionlessElement createBoulder() {
 		return boulder;
 	}
 
-	public static MotionlessElement createMacadam() {
+	public static MotionlessElement createFloor() {
 		return floor;
 	}
 
@@ -81,7 +81,7 @@ public abstract class MotionlessElementsFactory {
 	 *
 	 * @return the motionless element
 	 */
-	public static MotionlessElement createObstacle() {
+	public static MotionlessElement createUnbreakableWall() {
 		return UNBREAKABLEWALL;
 	}
 
@@ -90,7 +90,7 @@ public abstract class MotionlessElementsFactory {
 	 *
 	 * @return the motionless element
 	 */
-	public static MotionlessElement createTree() {
+	public static MotionlessElement createDiamond() {
 		return DIAMOND;
 	}
 
