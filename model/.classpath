@@ -22,5 +22,10 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
+=======
+	<classpathentry kind="lib" path="D:/Users/Utilisateur/Documents/Ecole/Prosit/Java/Prosit 47/mysql-connector-java-5.1.42/mysql-connector-java-5.1.42-bin.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/contract"/>
+>>>>>>> bc6f3c29191d59c6299ab8f5ecd1f5f7b31e0dde
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
